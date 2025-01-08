@@ -1,0 +1,396 @@
+[gd_scene load_steps=5 format=3 uid="uid://blccokxldkack"]
+
+[ext_resource type="Script" path="res://camera_2d.gd" id="1_d1mlx"]
+[ext_resource type="Script" path="res://exit.gd" id="2_yvfoq"]
+[ext_resource type="Script" path="res://yes.gd" id="3_jy760"]
+[ext_resource type="Script" path="res://label_2.gd" id="4_cwdhn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="." groups=["cam"]]
+position = Vector2(576, 324)
+ignore_rotation = false
+position_smoothing_enabled = true
+position_smoothing_speed = 2.5
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 2.5
+script = ExtResource("1_d1mlx")
+
+[node name="SMASBOOK" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SMASBOOK"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SMASBOOK/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 84
+text = "IS IT A SMASBOOK"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SMASBOOK/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 69
+alignment = 1
+
+[node name="yes" type="Button" parent="SMASBOOK/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "YES"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../PRO")
+x = 1728
+y = 324
+type = "SMASBOOK"
+button = true
+
+[node name="no" type="Button" parent="SMASBOOK/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "no
+"
+script = ExtResource("2_yvfoq")
+
+[node name="PRO" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2304.0
+offset_top = 648.0
+offset_right = 2304.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PRO"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PRO/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 84
+text = "DOES IT RUN LINUX"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PRO/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 69
+alignment = 1
+
+[node name="yes" type="Button" parent="PRO/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "YES"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../PLUS")
+x = 1728
+y = -324
+type = "PRO"
+button = true
+
+[node name="no" type="Button" parent="PRO/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "no
+"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../PLUS")
+x = 1728
+y = -324
+type = "PRO"
+
+[node name="PLUS" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2304.0
+offset_right = 2304.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PLUS"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PLUS/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 84
+text = "DOES IT DUAL BOOT"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PLUS/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 69
+alignment = 1
+
+[node name="yes" type="Button" parent="PLUS/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "YES"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../MAX")
+x = 576
+y = -324
+type = "PLUS"
+button = true
+
+[node name="no" type="Button" parent="PLUS/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "no
+"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../MAX")
+x = 576
+y = -324
+type = "PLUS"
+
+[node name="MAX" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -648.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MAX"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MAX/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 84
+text = "IS ITS SCREEN 14\"+"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MAX/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 69
+alignment = 1
+
+[node name="yes" type="Button" parent="MAX/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "YES"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../ULTRA")
+x = 576
+y = -1620
+type = "MAX"
+button = true
+
+[node name="no" type="Button" parent="MAX/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "no
+"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../ULTRA")
+x = 576
+y = -1620
+type = "MAX"
+
+[node name="ULTRA" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1152.0
+offset_top = -1296.0
+offset_right = 1152.0
+offset_bottom = -1296.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ULTRA"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ULTRA/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 84
+text = "DOES IT HAVE 16GB+ RAM"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ULTRA/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 69
+alignment = 1
+
+[node name="yes" type="Button" parent="ULTRA/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "YES"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../TOUCH")
+x = 576
+y = -972
+type = "ULTRA"
+button = true
+
+[node name="no" type="Button" parent="ULTRA/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "no
+"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../TOUCH")
+x = 576
+y = -972
+type = "ULTRA"
+
+[node name="TOUCH" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1152.0
+offset_top = -648.0
+offset_right = 1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TOUCH"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="TOUCH/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 84
+text = "IS IT TOUCH SCREEN
+"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TOUCH/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 69
+alignment = 1
+
+[node name="yes" type="Button" parent="TOUCH/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "YES"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../TYPE")
+x = 1728
+y = 972
+type = "TOUCH"
+button = true
+
+[node name="no" type="Button" parent="TOUCH/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("ref")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 69
+text = "no
+"
+script = ExtResource("3_jy760")
+ref = NodePath("../../../../TYPE")
+x = 1728
+y = 972
+type = "TOUCH"
+
+[node name="TYPE" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1152.0
+offset_top = 648.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TYPE"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="TYPE/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 84
+text = "YOU HAVE A:"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TYPE/VBoxContainer" groups=["label"]]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "text"
+horizontal_alignment = 1
+script = ExtResource("4_cwdhn")
+
+[node name="no" type="Button" parent="TYPE/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 69
+text = "EXIT"
+script = ExtResource("2_yvfoq")
+
+[connection signal="pressed" from="SMASBOOK/VBoxContainer/HBoxContainer/yes" to="SMASBOOK/VBoxContainer/HBoxContainer/yes" method="_on_pressed"]
+[connection signal="pressed" from="SMASBOOK/VBoxContainer/HBoxContainer/no" to="SMASBOOK/VBoxContainer/HBoxContainer/no" method="_on_pressed"]
+[connection signal="pressed" from="PRO/VBoxContainer/HBoxContainer/yes" to="PRO/VBoxContainer/HBoxContainer/yes" method="_on_pressed"]
+[connection signal="pressed" from="PRO/VBoxContainer/HBoxContainer/no" to="PRO/VBoxContainer/HBoxContainer/no" method="_on_pressed"]
+[connection signal="pressed" from="PLUS/VBoxContainer/HBoxContainer/yes" to="PLUS/VBoxContainer/HBoxContainer/yes" method="_on_pressed"]
+[connection signal="pressed" from="PLUS/VBoxContainer/HBoxContainer/no" to="PLUS/VBoxContainer/HBoxContainer/no" method="_on_pressed"]
+[connection signal="pressed" from="MAX/VBoxContainer/HBoxContainer/yes" to="MAX/VBoxContainer/HBoxContainer/yes" method="_on_pressed"]
+[connection signal="pressed" from="MAX/VBoxContainer/HBoxContainer/no" to="MAX/VBoxContainer/HBoxContainer/no" method="_on_pressed"]
+[connection signal="pressed" from="ULTRA/VBoxContainer/HBoxContainer/yes" to="ULTRA/VBoxContainer/HBoxContainer/yes" method="_on_pressed"]
+[connection signal="pressed" from="ULTRA/VBoxContainer/HBoxContainer/no" to="ULTRA/VBoxContainer/HBoxContainer/no" method="_on_pressed"]
+[connection signal="pressed" from="TOUCH/VBoxContainer/HBoxContainer/yes" to="TOUCH/VBoxContainer/HBoxContainer/yes" method="_on_pressed"]
+[connection signal="pressed" from="TOUCH/VBoxContainer/HBoxContainer/no" to="TOUCH/VBoxContainer/HBoxContainer/no" method="_on_pressed"]
+[connection signal="pressed" from="TYPE/VBoxContainer/no" to="TYPE/VBoxContainer/no" method="_on_pressed"]
